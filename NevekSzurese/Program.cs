@@ -41,7 +41,7 @@ namespace NevekSzurese
                     Console.Clear();
                     foreach (String nev in nevek)
                     {
-                        string[]darabok = nev.TrimStart().Split(' ');
+                        string[] darabok = nev.TrimStart().Split(' ');
                         bool jo = true;
                         foreach (String nevdarab in darabok)
                         {
@@ -50,14 +50,14 @@ namespace NevekSzurese
                                 jo = false;
                         }
                         if (jo)
-                        Console.WriteLine(nev.TrimStart());
+                            Console.WriteLine(nev.TrimStart());
                     }
                 }
                 else if (valaszt == "3")
                 {
                     //Csak számjegy nélküliek
                     Console.Clear();
-                    foreach(var nev in nevek)
+                    foreach (var nev in nevek)
                     {
                         bool jo = true;
                         foreach (char betu in nev)
@@ -71,13 +71,14 @@ namespace NevekSzurese
                 }
                 else if (valaszt == "4")
                 {
-                foreach (var nev in nevek)
+                    Console.Clear();
+                    foreach (var nev in nevek)
                     {
                         bool jo = true;
-                        foreach(char betu in nev)
+                        foreach (char betu in nev)
                         {
                             if (!(char.IsLetterOrDigit(betu) || betu! == ' '))
-                                    jo = false;
+                                jo = false;
                         }
                         if (jo)
                             Console.WriteLine(nev);
@@ -85,7 +86,13 @@ namespace NevekSzurese
                 }
                 else if (valaszt == "5")
                 {
-                    //5
+                    Console.Clear();
+                    //5 legalább egy szóközt tartalmazók
+                    foreach (var nev in nevek)
+                    {
+                        if (nev.Contains(" "))
+                            Console.WriteLine(nev);
+                    }
                 }
                 else if (valaszt == "6")
                 {
