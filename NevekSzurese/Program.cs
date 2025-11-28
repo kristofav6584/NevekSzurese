@@ -53,7 +53,19 @@
                 }
                 else if (valaszt == "3")
                 {
-                    //3
+                    //Csak számjegy nélküliek
+                    Console.Clear();
+                    foreach(var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach (char betu in nev)
+                        {
+                            if (char.IsNumber(betu))
+                                jo = false;
+                        }
+                        if (jo)
+                            Console.WriteLine(nev);
+                    }
                 }
                 else if (valaszt == "4")
                 {
