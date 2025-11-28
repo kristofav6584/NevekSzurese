@@ -4,48 +4,58 @@
     {
         static void Main(string[] args)
         {
-            Console.Clear();
-            Console.WriteLine("0. Kilépés");
-            Console.WriteLine("1. Néveleji szóközök levágva");
-            Console.WriteLine("2. Csak nagybetűvel kezdődők");
-            Console.WriteLine("3. Csak számjegy nélküliek");
-            Console.WriteLine("4. Csak speciális jel nélküliek");
-            Console.WriteLine("5. Legalább egy szóközt tartalmazó");
-            Console.WriteLine("6. Csak rendes nevek");
-            string valaszt = Console.ReadLine();
-            if (valaszt == "0")
-            {
-                return;
-            }
-            else if (valaszt == "1")
-            {
-                //1
-            }
-            else if (valaszt == "1")
-            {
-                //2
-            }
-            else if (valaszt == "1")
-            {
-                //3
-            }
-            else if (valaszt == "1")
-            {
-                //4
-            }
-            else if (valaszt == "1")
-            {
-                //5
-            }
-            else if (valaszt == "1")
-            {
-                //6
-            }
-            else
-            {
-                Console.WriteLine("Nincs ilyen parancs!");
-            }
+            List<string> nevek = new List<string>();
+
+            nevek.Add("Kiss István");
+            nevek.Add("Nagy elemér");
+            nevek.Add("kissándorjózsef213");
+            nevek.Add(" Tóth# Ilona");
+            nevek.Add("Kovács Kristóf");
+
+            while (true) {
+                Console.Clear();
+                Console.WriteLine("0. Kilépés");
+                Console.WriteLine("1. Néveleji szóközök levágva");
+                Console.WriteLine("2. Csak nagybetűvel kezdődők");
+                Console.WriteLine("3. Csak számjegy nélküliek");
+                Console.WriteLine("4. Csak speciális jel nélküliek");
+                Console.WriteLine("5. Legalább egy szóközt tartalmazó");
+                Console.WriteLine("6. Csak rendes nevek");
+                string valaszt = Console.ReadLine();
+                if (valaszt == "0")
+                {
+                    return;
+                }
+                else if (valaszt == "1")
+                {
+                    //1
+                }
+                else if (valaszt == "1")
+                {
+                    //2
+                }
+                else if (valaszt == "1")
+                {
+                    //3
+                }
+                else if (valaszt == "1")
+                {
+                    //4
+                }
+                else if (valaszt == "1")
+                {
+                    //5
+                }
+                else if (valaszt == "1")
+                {
+                    //6
+                }
+                else
+                {
+                    Console.WriteLine("Nincs ilyen parancs!");
+                }
                 Console.ReadKey();
+            }
         }
     }
 }
