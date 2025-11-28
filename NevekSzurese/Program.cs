@@ -96,7 +96,24 @@ namespace NevekSzurese
                 }
                 else if (valaszt == "6")
                 {
-                    //6
+                    foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach(char betu in nev)
+                        {
+                            if (!char.IsLetter(betu) && betu != ' ')
+                                jo = false;
+                        }
+                        //nagybetuvizsgalat
+                        string[] darabok = nev.TrimStart().Split(' ');
+                        foreach (String nevdarab in darabok)
+                        {
+                            if (!char.IsUpper(nevdarab.TrimStart()[0]))
+                                jo = false;
+                        }
+                        if (jo)
+                            Console.WriteLine(nev);
+                    }
                 }
                 else
                 {
