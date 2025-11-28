@@ -1,4 +1,6 @@
-﻿namespace NevekSzurese
+﻿using System.Diagnostics;
+
+namespace NevekSzurese
 {
     internal class Program
     {
@@ -69,7 +71,17 @@
                 }
                 else if (valaszt == "4")
                 {
-                    //4
+                foreach (var nev in nevek)
+                    {
+                        bool jo = true;
+                        foreach(char betu in nev)
+                        {
+                            if (!(char.IsLetterOrDigit(betu) || betu! == ' '))
+                                    jo = false;
+                        }
+                        if (jo)
+                            Console.WriteLine(nev);
+                    }
                 }
                 else if (valaszt == "5")
                 {
