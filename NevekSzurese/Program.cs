@@ -36,7 +36,20 @@
                 }
                 else if (valaszt == "2")
                 {
-                    //2
+                    Console.Clear();
+                    foreach (String nev in nevek)
+                    {
+                        string[]darabok = nev.TrimStart().Split(' ');
+                        bool jo = true;
+                        foreach (String nevdarab in darabok)
+                        {
+                            //elemér
+                            if (!char.IsUpper(nevdarab.TrimStart()[0]))
+                                jo = false;
+                        }
+                        if (jo)
+                        Console.WriteLine(nev.TrimStart());
+                    }
                 }
                 else if (valaszt == "3")
                 {
